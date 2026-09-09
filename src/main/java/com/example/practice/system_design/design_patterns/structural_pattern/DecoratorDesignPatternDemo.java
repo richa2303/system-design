@@ -22,7 +22,7 @@ class LuxuryCar implements Car{
     @Override
     public void assemble() {
        this.car.assemble();
-       System.out.println("Decorate Luxury Car....");
+       System.out.println("Decorate Luxury Car Now....");
     }
 }
 
@@ -35,7 +35,7 @@ class SportsCar implements Car{
     @Override
     public void assemble() {
        car.assemble();
-       System.out.println("Decorate sports Car...");
+       System.out.println("Decorate sports Car Now...");
     }
 }
 public class DecoratorDesignPatternDemo {

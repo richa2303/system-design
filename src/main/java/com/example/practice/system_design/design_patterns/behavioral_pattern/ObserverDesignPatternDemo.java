@@ -128,6 +128,6 @@ public class ObserverDesignPatternDemo {
 
         subs.update();
 
-        topic.postMessage("Hello Krati welcome in our company");
+        topic.postMessage("Hello Krati welcome in our company test");
     }
 }
