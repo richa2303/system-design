@@ -108,6 +108,7 @@ public class AdapterDesignPatternDemo {
         System.out.println("v120 volts using Class Adapter="+v120.getVolts());
     }
 
+
     private static Volt getVolt(SocketAdapter sockAdapter, int i) {
         switch (i){
             case 3: return sockAdapter.get3Volt();
