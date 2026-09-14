@@ -8,14 +8,24 @@ class Person{
     private String phoneNumber;
 
     Person(PersonBuilder builder){
-        this.firstName = builder.getFirstName();
-        this.lastName = builder.getLastName();
-        this.age = builder.getAge();
-        this.phoneNumber = builder.getPhoneNumber();
+        this.firstName = builder.firstName;
+        this.lastName = builder.lastName;
+        this.age = builder.age;
+        this.phoneNumber = builder.phoneNumber;
     }
 
-    public PersonBuilder getBuilder(){
+    public static PersonBuilder getBuilder() {
         return new PersonBuilder();
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 
     static class PersonBuilder{
@@ -45,24 +55,8 @@ class Person{
             return this;
         }
 
-        public String getFirstName() {
-            return firstName;
-        }
-
-        public String getLastName() {
-            return lastName;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-        public String getPhoneNumber() {
-            return phoneNumber;
-        }
-
         public Person build() {
-            return new person(this);
+            return new Person(this);
         }
 
     }
@@ -78,6 +72,8 @@ public class PersonBuilderTest {
                 .setAge(25)
                 .setPhoneNumber("1233131")
                 .build();
+
+        System.out.println(" person :"+createPerson.toString());
 
     }
 }
